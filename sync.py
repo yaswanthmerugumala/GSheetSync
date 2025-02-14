@@ -1,4 +1,6 @@
+import os
 import gspread
+CREDS_FILE = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
 from oauth2client.service_account import ServiceAccountCredentials
 from sqlalchemy import create_engine, Column, Integer, String, DECIMAL
 from sqlalchemy.orm import declarative_base, sessionmaker
@@ -13,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 
 # Google Sheets Credentials
 SCOPE = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-CREDS_FILE = "credentials.json"  # Ensure this file exists!
+
 SPREADSHEET_ID = "15FQxo2ZpIRdHcxuRvvNq6kUrWbjyFewE3vFxhSgCnk4"  # Replace with actual Sheet ID
 
 # MySQL Configuration
