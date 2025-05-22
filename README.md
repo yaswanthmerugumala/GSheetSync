@@ -16,7 +16,7 @@ GSheetSync is a Python-based tool that enables seamless, automatic synchronizati
 
 ## Technologies Used
 
-- Python 3.x  
+- Python  
 - Google Sheets API (via `gspread` and OAuth2)  
 - SQLAlchemy ORM for MySQL integration  
 - APScheduler for task scheduling  
